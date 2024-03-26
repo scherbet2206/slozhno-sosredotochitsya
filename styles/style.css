@@ -1,5 +1,355 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Desktop first, light theme*/
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  margin: auto;
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  object-fit: cover;
+  object-position: center;
+  max-width: 1024px;
+}
+
+/* Шапка*/
+.header {
+  position: relative;
+  min-height: 768px;
+  padding-inline-start: var(--side-margin);
+  padding-inline-end: var(--side-margin);
+}
+
+.header__theme-menu {
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  padding-block-start: var(--padding-bottom-menu);
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}
+
+.title {
+  margin-block-start: 273px;
+  margin-inline-start: calc(0px - var(--side-margin));
+  font-family: var(--font);
+  color: var(--big-title-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--big-title-size-tablet-desktop);
+  text-shadow: var(--big-title-header-shadow-size)
+    var(--big-title-header-shadow-size) 0px var(--big-title-shadow-color);
+  line-height: var(--big-title-line-height);
+}
+
+.header__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: start;
+  margin-block-start: 114px;
+}
+
+.description {
+  max-width: 491px;
+  background-color: var(--accent-color);
+  font-family: var(--font);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--main-text-size);
+  line-height: var(--medium-line-height);
+  color: var(--main-color-text);
+}
+
+.decorated-zone::before {
+  content: "";
+  width: var(--decoration-side-size);
+  height: var(--decoration-side-size);
+  position: absolute;
+  right: var(--offset-decoration);
+  top: var(--offset-decoration);
+  border-block-start: var(--decoration-side-width) solid var(--main-color-text);
+  border-inline-end: var(--decoration-side-width) solid var(--main-color-text);
+}
+
+.decorated-zone::after {
+  content: "";
+  width: var(--decoration-side-size);
+  height: var(--decoration-side-size);
+  position: absolute;
+  left: var(--offset-decoration);
+  bottom: var(--offset-decoration);
+  border-block-end: var(--decoration-side-width) solid var(--main-color-text);
+  border-inline-start: var(--decoration-side-width) solid var(--main-color-text);
+}
+
+.header__theme-menu-item {
+  list-style-type: none;
+}
+
+.header__theme-menu-button {
+  min-width: 70px;
+  min-height: 26px;
+  border: none;
+  background-color: transparent;
+  color: var(--main-color-text);
+  font-size: var(--main-text-size);
+  font-family: var(--font);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid currentColor;
+}
+
+/* Основной контент. Текстовые блоки*/
+.main {
+  margin: var(--margin-tablet-desktop);
+  margin-block-start: var(--space-after-header);
+}
+
+.section-column-type {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-between-text-blocks);
+}
+.list-answers {
+  display: grid;
+  gap: var(--space-between-list-elements);
+}
+
+.section-title {
+  font-family: var(--font);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--main-text-size);
+  line-height: var(--medium-line-height);
+  color: var(--main-color-text);
+}
+
+.list__title-item {
+  font-family: var(--font);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--main-text-size);
+  line-height: var(--medium-line-height);
+  color: var(--main-color-text);
+  background-color: var(--accent-color);
+}
+
+.list__description-item {
+  font-family: var(--font);
+  font-size: var(--main-text-size);
+  line-height: var(--medium-line-height);
+  color: var(--main-color-text);
+}
+
+.list__title-item {
+  margin-block-end: var(--space-between-title-and-description);
+}
+
+.picture-sunset {
+  grid-area: sunset;
+}
+
+.picture-ice-cream {
+  grid-area: ice-cream;
+}
+.picture-tape {
+  grid-area: tape;
+}
+.picture-books {
+  grid-area: books;
+}
+.picture-street {
+  grid-area: street;
+}
+
+/*Основной контент. Блок с изображениями*/
+.pictures-answers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1.2fr 1.65fr;
+  grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+}
+
+@media (width >= 1024px) {
+  /* Основной контент*/
+
+  .footer {
+    margin: var(--margin-tablet-desktop);
+    margin-block-start: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: auto;
+    min-height: 768px;
+  }
+
+  .footer-title {
+    font-family: "IBM Plex Mono";
+    font-weight: 700;
+    font-size: 157px;
+    line-height: 82.5%;
+    color: var(--big-title-text-color);
+    text-shadow: 2px 2px 0px var(--big-title-footer-text-shadow-color);
+  }
+}
+
+@media (width < 768px) {
+  /* Шапка*/
+  .header {
+    min-height: 648px;
+    margin: var(--margin-mobile);
+  }
+  .header__theme-menu {
+    align-items: start;
+    justify-content: end;
+    padding-block-start: 65px;
+  }
+  .header__theme-menu-list {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+  }
+  .title {
+    margin-block-start: 65px;
+  }
+  .description {
+    margin-block-start: 55px;
+  }
+
+  /* Основной контент*/
+  .main {
+    margin: var(--margin-mobile);
+    margin-block-start: 40px;
+  }
+  .section-column-type {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .list-answers {
+    gap: 20px;
+  }
+
+  /*Основной контент. Блок с изображениями*/
+  .pictures-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer {
+    margin: var(--margin-mobile);
+    margin-block-start: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: auto;
+    min-height: 667px;
+  }
+
+  .footer-title {
+    font-family: "IBM Plex Mono";
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 82.5%;
+    color: var(--big-title-color);
+    text-shadow: 2px 2px 0px var(--big-title-footer-text-shadow-color);
+  }
+}
+
+@media (768px <= width < 1024px) {
+  /* Шапка*/
+  .header {
+    min-height: 984px;
+    margin: var(--margin-tablet-desktop);
+  }
+  .header__theme-menu {
+    align-items: start;
+    justify-content: end;
+    padding-block-start: 172px;
+  }
+  .header__theme-menu-list {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+  }
+  .title {
+    margin-block-start: 173px;
+    margin-inline-start: -20px;
+  }
+
+  .header__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: start;
+    margin-block-start: 114px; /*исправить отступ, удалить его в описании*/
+  }
+
+  .description {
+    margin-block-start: 162px;
+    margin-inline-start: 364px;
+    max-width: 364px;
+  }
+
+  /* Основной контент*/
+  .main {
+    margin: var(--margin-tablet-desktop);
+    margin-block-start: 60px;
+  }
+  .section-column-type {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  .list-answers {
+    gap: 20px;
+  }
+
+  .pictures-answers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1.2fr 1.65fr;
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+  .footer {
+    margin: var(--margin-tablet-desktop);
+    margin-block-start: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: auto;
+    min-height: 768px;
+  }
+
+  .footer-title {
+    font-family: "IBM Plex Mono";
+    font-weight: 700;
+    font-size: 157px;
+    line-height: 82.5%;
+    color: var(--big-title-text-color);
+    text-shadow: 2px 2px 0px var(--big-title-footer-text-shadow-color);
+  }
+}
+
+.tiled-image-layout {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
