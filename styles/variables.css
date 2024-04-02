@@ -1,59 +1,91 @@
 :root {
-  --bg-image: url(../images/cover-image-light.png);
-  --bg-color: #fff1f7;
-  --font: "IBM Plex Mono";
-  --big-title-size-tablet-desktop: clamp(
-    7.5rem,
-    0.5625rem + 14.4531vw,
-    9.8125rem
-  );
-  --big-title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --big-title-line-height: 82.5%;
-  --medium-line-height: 130%;
+  --accent-color: #ff8dcb;
   --big-title-color: #ffc2e6;
   --big-title-shadow-color: #ff0070;
+  --description-text-color: #353430;
+  --main-color-text: var(--description-text-color);
+  --section-title-color: var(--description-text-color);
+  --title-item-color: var(--description-text-color);
+  --title-subitem-color: var(--description-text-color);
+  --menu-color: var(--description-text-color);
+  --menu-color-hover: rgba(50, 49, 45, 0.4);
+  --decoration-color: var(--menu-color);
+  --bg-image: url(../images/cover-image-light.png);
+  --bg-color: #fff1f7;
+  --font: IBM Plex Mono, Arial, sans-serif;
+  --big-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --big-title-line-height: 82.5%;
+  --medium-line-height: 130%;
   --big-title-header-shadow-size: 4px;
   --big-title-footer-shadow-size: 2px;
-  --description-text-color: #353430;
   --main-text-size: 18px;
-  --main-color-text: var(--description-text-color);
-  --accent-color: #ff8dcb;
-  --decoration-color: var(--description-text-color);
   --decoration-side-size: 25px;
   --decoration-side-width: 1px;
   --font-weight-bold: 700;
+  --font-weight-normal: 400;
 
+  --gap-menu-list: 10px;
   --padding-bottom-menu: 20px;
   --offset-decoration: 20px;
+  --offset-decoration-rec-right: 30px;
+  --offset-decoration-rec-top: 20px;
+  --display-decoration-rec: none;
   --side-margin: 20px;
-
-  --space-after-header: 60px;
-  --space-before-footer: 60px;
-  --space-between-text-blocks: 10px;
-  --space-between-list-elements: 20px;
-  --space-between-title-and-description: 10px;
-
-  /*удалить после исправлений*/
-  --margin-mobile: 10px;
-  --margin-tablet-desktop: 20px;
-}
-
-@media (width < 768px) {
-  :root {
-    --padding-bottom-menu: 10px;
-    --offset-decoration: 10px;
-    --side-margin: 10px;
-    --space-after-header: 40px;
-    --space-before-footer: 40px;
-  }
+  --gap-after-header: 60px;
+  --gap-before-footer: 60px;
+  --gap-between-sections: 80px;
+  --gap-between-section-title-and-answers: 20px;
+  --gap-between-title-and-list-answers: 10px;
+  --gap-between-list-elements: 20px;
+  --gap-between-title-item-and-description: 10px;
+  --width-title: 315px;
+  --header-height: 768px;
+  --footer-height: 768px;
+  --margin-top-title: 273px;
+  --margin-top-description: 114px;
+  --width-description: 491px;
 }
 
 @media (width < 1024px) {
   :root {
-    --menu-margin: 20px;
+    --big-title-shadow-color: #ff8dcb;
+    --padding-bottom-menu: 192px;
     --offset-decoration: 20px;
+    --offset-decoration-rec-right: 30px;
+    --offset-decoration-rec-top: 20px;
     --side-margin: 20px;
-    --space-after-header: 60px;
-    --space-before-footer: 60px;
+    --gap-after-header: 60px;
+    --gap-before-footer: 60px;
+    --gap-between-sections: 80px;
+    --gap-between-title-and-list-answers: 20px;
+    --width-title: 236px;
+    --header-height: 1024px;
+    --footer-height: 1024px;
+    --margin-top-title: 173px;
+    --margin-top-description: 162px;
+    --width-description: 364px;
+    --big-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width < 768px) {
+  :root {
+    --big-title-shadow-color: #ff8dcb;
+    --padding-bottom-menu: 75px;
+    --offset-decoration: 10px;
+    --offset-decoration-rec-right: 20px;
+    --offset-decoration-rec-top: 10px;
+    --side-margin: 10px;
+    --gap-after-header: 40px;
+    --gap-before-footer: 40px;
+    --gap-between-sections: 50px;
+    --gap-between-title-and-list-answers: 0;
+    --width-title: auto;
+    --header-height: 668px;
+    --footer-height: 668px;
+    --margin-top-title: 65px;
+    --margin-top-description: 55px;
+    --width-description: auto;
+    --big-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
