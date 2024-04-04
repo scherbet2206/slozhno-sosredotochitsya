@@ -1,4 +1,5 @@
 /* Desktop first, light theme*/
+/*grid-template-rows: minmax(100px, 0.5fr) minmax(150px, 0.7fr) 1fr;*/
 
 .page {
   margin: auto;
@@ -256,7 +257,8 @@
   display: grid;
   max-height: 1048px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1.2fr 1.65fr;
+  grid-template-rows: minmax(100px, 260px) minmax(100px, 315px) minmax(100px, 428px);
+  gap: 18px;
   grid-template-areas:
     "sunset sunset ice-cream"
     "tape books ice-cream"
@@ -273,7 +275,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   min-height: var(--footer-height);
 }
 
@@ -314,12 +315,10 @@
   }
 
   .pictures-answers {
-    box-sizing: border-box;
     display: grid;
     max-height: 768px;
     grid-template-columns: repeat(3, 1fr);
-    /*grid-template-rows: 1fr 1.2fr 1.65fr;*/
-    grid-template-rows: 0.5fr 0.7fr 1fr;
+    grid-template-rows: minmax(100px, 192px) minmax(100px, 230px) minmax(100px, 318px);
     gap: 18px;
     grid-template-areas:
       "sunset sunset ice-cream"
@@ -363,8 +362,12 @@
 
   /*Основной контент. Блок с изображениями*/
   .pictures-answers {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: grid;
+    grid-template-areas: none;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 142px 355px 237px 355px 237px;
+    gap: 18px;
+    
+    
   }
 }
