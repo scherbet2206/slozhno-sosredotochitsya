@@ -5,8 +5,8 @@
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-attachment: fixed;
-  object-fit: cover;
-  object-position: center;
+  background-position: center;
+  background-size: cover;
   max-width: 1024px;
 }
 
@@ -21,6 +21,7 @@
 .header {
   position: relative;
   min-height: var(--header-height);
+  height: 100vh;
   padding-inline-start: var(--side-margin);
   padding-inline-end: var(--side-margin);
 }
@@ -201,12 +202,12 @@
 
 .link-in-description-item {
   text-decoration: none;
-  text-shadow: 2px 1px var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .link-in-description-item:hover {
   outline: none;
-  text-decoration: underline;
+  border-block-end: 1px solid;
   cursor: pointer;
 }
 
@@ -278,6 +279,7 @@
   align-items: center;
   justify-content: center;
   min-height: var(--footer-height);
+  height: 100vh;
 }
 
 .footer-title {
@@ -292,7 +294,6 @@
 
 @media (768px <= width < 1024px) {
   .header__theme-menu {
-    align-items: start;
     justify-content: end;
   }
 
@@ -301,44 +302,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: var(--gap-menu-list);
-  }
-
-  .section-column-type {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--gap-between-title-and-list-answers);
   }
 
   .list-row-type {
-    display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap-between-title-and-list-answers);
   }
 
   .pictures-answers {
-    display: grid;
     max-height: 780px;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(100px, 192px) minmax(100px, 230px) minmax(
         100px,
         318px
       );
-    gap: 20px;
-    grid-template-areas:
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street";
-  }
-
-  .footer-title {
-    font-size: var(--big-title-size);
   }
 }
 
 @media (width < 768px) {
   .header__theme-menu {
-    align-items: start;
     justify-content: end;
   }
   .header__theme-menu-list {
@@ -346,7 +327,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: var(--gap-menu-list);
   }
 
   .title {
@@ -354,13 +334,10 @@
   }
 
   .section-column-type {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: var(--gap-between-title-and-list-answers);
   }
 
   .list-row-type {
-    display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap-between-list-elements);
   }

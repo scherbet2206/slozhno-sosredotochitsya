@@ -17,19 +17,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --accent-color: #ff0070;
-  --big-title-color: #db00ff;
-  --big-title-shadow-color: var(--accent-color);
-  --description-text-color: #000028;
-  --main-color-text: #f1b2ce;
-  --section-title-color: var(--accent-color);
-  --title-item-color: var(--description-text-color);
-  --title-subitem-color: var(--description-text-color);
-  --menu-color: var(--accent-color);
-  --menu-color-hover: rgba(255, 0, 112, 0.4);
-  --decoration-color: var(--menu-color);
-  --display-decoration-rec: inline-block;
-  --bg-image: url(../images/cover-image-dark.png);
-  --bg-color: var(--description-text-color);
+    --accent-color: #ff0070;
+    --big-title-color: #db00ff;
+    --big-title-shadow-color: var(--accent-color);
+    --description-text-color: #000028;
+    --main-color-text: #f1b2ce;
+    --section-title-color: var(--accent-color);
+    --title-item-color: var(--description-text-color);
+    --title-subitem-color: var(--description-text-color);
+    --menu-color: var(--accent-color);
+    --menu-color-hover: rgba(255, 0, 112, 0.4);
+    --decoration-color: var(--menu-color);
+    --display-decoration-rec: inline-block;
+    --bg-image: url(../images/cover-image-dark.png);
+    --bg-color: var(--description-text-color);
   }
 }
