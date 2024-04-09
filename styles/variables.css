@@ -39,8 +39,9 @@
   --gap-between-list-elements: 20px;
   --gap-between-title-item-and-description: 10px;
   --width-title: 315px;
-  --header-height: 768px;
-  --footer-height: 768px;
+  --header-height: 668px;
+  --header-width: 1024px;
+  --footer-height: 668px;
   --margin-top-title: 273px;
   --margin-top-description: 114px;
   --width-description: 491px;
@@ -59,8 +60,6 @@
     --gap-between-sections: 80px;
     --gap-between-title-and-list-answers: 20px;
     --width-title: 236px;
-    --header-height: 1024px;
-    --footer-height: 1024px;
     --margin-top-title: 173px;
     --margin-top-description: 162px;
     --width-description: 364px;
@@ -81,8 +80,7 @@
     --gap-between-sections: 50px;
     --gap-between-title-and-list-answers: 0;
     --width-title: auto;
-    --header-height: 668px;
-    --footer-height: 668px;
+    --header-width: 375px;
     --margin-top-title: 65px;
     --margin-top-description: 55px;
     --width-description: auto;
